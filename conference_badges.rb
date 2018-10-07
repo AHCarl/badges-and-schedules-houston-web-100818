@@ -19,7 +19,11 @@ def assign_rooms(names)
 end
 
 def printer(names)
-  batch_badge_creator(names).each do |i|
+  printz = []
+  printz = batch_badge_creator(names).concat(assign_rooms(names))
+  printz.each do |i|
     puts i 
+  end
+  
   end
   
